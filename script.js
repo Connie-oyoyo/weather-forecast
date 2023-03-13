@@ -18,9 +18,8 @@ function search(event) {
 
 function searchPosition(position) {
   let apiKey = "ad35702ba0f5fcbdc3844584b48f901d";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=$
-  {position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  axios.get(`${apiUrl}&appid=${apikey}`).then(showTemperature);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
 }
 function getCurrentPosition(event) {
   console.log("hd");
